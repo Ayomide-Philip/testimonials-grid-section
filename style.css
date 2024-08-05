@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.attribution {padding-top: 5%; font-size: 11px; text-align: center; font-family: cursive; font-size: 1em; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+    body{
+        background-color: hsl(0, 0%, 81%);
+    }
+
+    body > div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr  1fr ;
+        gap: 2%;
+        width: 80%;
+        
+    }
+
+    .grid-item{
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .grid-item > div.header > div > h3{
+        margin: 0px;
+        font-size: small;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 700;
+    }
+
+    .grid-item > div.header > div > h4{
+        margin: 0px;
+        font-size: smaller;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: lighter;
+    }
+
+    .grid-item p {
+        font-size:smaller;
+    }
+    
+    div.grid-container > div.grid-item > .header > img{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-right: 5%;
+    }
+
+    .header{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .first-grid-item{
+        grid-column: span 2;
+        order: 1;
+        background-color: hsl(263, 55%, 52%);
+        color: white;
+        background-image: url(./images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-position:top right;
+    }
+
+    .second-grid-item{
+        order: 2;
+        background-color: hsl(217, 19%, 35%);
+        color: white;
+    }
+
+    .fifth-grid-item{
+        order: 3;
+        grid-row: span 2;
+        background-color: white;
+        font-size: larger;
+    }
+
+    .third-grid-item{
+        order: 4;
+        background-color: hsl(0, 0%, 100%);
+        font-size: large;
+    }
+    .fourth-grid-item{
+        order: 5;
+        grid-column: span 2;
+        background-color: hsl(219, 29%, 14%);
+        color: white;
+    }
+
+p.lead{
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 990px){
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .grid-item {
+        margin: 5%;
+    }
+    
+    .grid-item p {
+        font-size:large;
+        font-family: "Barlow Semi Condensed", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .grid-item > div.header > div > h3{
+        margin: 0px;
+        font-size: medium;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bolder;
+    }
+
+    .grid-item > div.header > div > h4{
+        margin: 0px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+    }
+
+    p.lead{
+        font-family: "Roboto Mono", monospace;
+        font-weight: bolder;
+        font-style: normal;
+        letter-spacing: 1px;
+      }
+
+      .first-grid-item{
+        order: 1;
+    }
+
+    .second-grid-item{
+        order: 2;
+    }
+
+    .fifth-grid-item{
+        order: 5;
+        
+    }
+
+    .third-grid-item{
+        order: 3;
+        
+    }
+    .fourth-grid-item{
+        order: 4;
+       
+    }
+
+
+    }
+
+@media only screen and (min-width: 991px){
+    .fifth-grid-item{
+        order: 3;
+        grid-row: span 2;
+        background-color: white;
+        font-size: larger;
+        width: 100%;
+    }
+
+    .grid-item > div.header > div > h4{
+        margin: 0px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+    }
+    .grid-item p {
+        font-family: "Barlow Semi Condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .grid-item > div.header > div > h3{
+        margin: 0px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bolder;
+    }
+    p.lead{
+        font-family: "Roboto Mono", monospace;
+        font-weight: bolder;
+        font-style: normal;
+      }
+}
